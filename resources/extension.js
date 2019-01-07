@@ -75,7 +75,7 @@ class CustomExtensionContent extends AutoContentScript {
 	/*
 	*@method : Effectue un sleep pour effectuer une attente
 	*@param {int} : nombre de secondes
-	*return void
+	*return new promise resolve
 	*/
 	static sleep(time){
 		return new Promise((resolve, reject)=>{
@@ -86,7 +86,7 @@ class CustomExtensionContent extends AutoContentScript {
 	/*
 	*@method : recherche un string
 	*@param {liste de string} : liste de hashtags à rechercher
-	*return void
+	*return new promise resolve
 	*/
 	static search(hashtag) {
 		return new Promise((resolve, reject)=>{
@@ -115,7 +115,7 @@ class CustomExtensionContent extends AutoContentScript {
 	/*
 	*@method : clique sur une photo
 	*@param {liste à deux eléments int} : position de la photo sur laquelle cliquer : [rangée, colonne]
-	*return void
+	*return new promise resolve
 	*/
 	static clickPic(picNb){
 		return new Promise((resolve, reject)=>{
@@ -131,7 +131,7 @@ class CustomExtensionContent extends AutoContentScript {
 
 	/*
 	*@method : clique sur le bouton like de la photo
-	*return void
+	*return new promise resolve
 	*/
 	static like(){
 		return new Promise((resolve, reject)=>{
@@ -145,7 +145,7 @@ class CustomExtensionContent extends AutoContentScript {
 
 	/*
 	*@method : clique sur le bouton close de la photo
-	*return void
+	*return new promise resolve
 	*/
 	static closePic(){
 		return new Promise((resolve,reject)=>{
@@ -159,7 +159,7 @@ class CustomExtensionContent extends AutoContentScript {
 
 	/*
 	*@method : clique sur le bouton follow et obtient le nom d'utilisateur à la liste
-	*return void
+	*return new promise resolve
 	*/
 	static follow(){
 		return new Promise((resolve, reject)=>{
@@ -176,7 +176,7 @@ class CustomExtensionContent extends AutoContentScript {
 	/*
 	*@method : Trouve tous les éléments repétitifs dans une liste
 	*@param {array} Tableau d'éléments contenant les hashtags
-	*@return array
+	*@return new promise resolve
 	*/
 	static hashSort(hashtag_list_temp) {
 		return new Promise((resolve, reject)=>{
@@ -195,7 +195,7 @@ class CustomExtensionContent extends AutoContentScript {
 
 	/*
 	*@method : Recherche premièrement les hashtags sur une photo puis les sauvegarde dans une liste
-	*return {string} Liste des hashtags
+	*return new promise resolve
 	*/
 	static hashSearch(){
 		return new Promise((resolve, reject)=>{
@@ -222,7 +222,7 @@ class CustomExtensionContent extends AutoContentScript {
 	/*
     *@method : lorsque le bot à commencé à suivre plus d'un certain nombre de personnes (ici 2), il recherche la première personne suivie et clique sur unfollow
     *@param {liste de string} : liste des personnes suivie
-    *@return void
+    *@return new promise resolve
     */
 	static unfollow(followList){
 		return new Promise((resolve, reject)=>{
