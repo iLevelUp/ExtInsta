@@ -74,12 +74,12 @@ class CustomExtensionContent extends AutoContentScript {
 
 	/*
 	*@method : Effectue un sleep pour effectuer une attente
-	*@param {int} : nombre de secondes
+	*@param {int} : nombre de secondes qui sera passé dans Lazy.delay
 	*return new promise resolve
 	*/
 	static sleep(time){
 		return new Promise((resolve, reject)=>{
-			Lazy.delay(function(){resolve()},5000)
+			Lazy.delay(function(){resolve()},time)
 		})
 	}
 
